@@ -1,0 +1,114 @@
+MagicDrawUML "3.5.1"
+(RTManager
+	(RTManagerOptions
+		CODE_GENERATION_REVERSE_OPTION 0
+		DELETED_ELEMENT_GENERATION_OPTION 0
+		USE_CLASSPATH_FOR_JAVA_REVERSE TRUE
+		LAUNCH_WIZARD TRUE
+		MERGE_AFTER_REVERSE FALSE
+		CREATE_ATTRIBUTES TRUE
+		WORKING_DIRECTORY "C:\\Program Files\\MagicDraw UML 3.6i Standard Demo\\"
+		DEFAULT_LANGUAGE "Java"
+		(JavaLanguageOptions
+			mGenEmptyDoc FALSE
+			mBracketInNewLine TRUE
+			mAddSpaces TRUE
+			mCommentStyle 0
+			mUseJavaDoc FALSE
+			mUseClassPath TRUE
+			mClassPath "C:\\Program Files\\MagicDraw UML 3.6i Standard Demo\\lib\\jaxp.jar;C:\\Program Files\\MagicDraw UML 3.6i Standard Demo\\lib\\parser.jar;C:\\Program Files\\MagicDraw UML 3.6i Standard Demo\\lib\\jhall.jar;C:\\Program Files\\MagicDraw UML 3.6i Standard Demo\\lib\\mail.jar;C:\\Program Files\\MagicDraw UML 3.6i Standard Demo\\lib\\activation.jar;C:\\Program Files\\MagicDraw UML 3.6i Standard Demo\\lib\\md.jar;C:\\Program Files\\MagicDraw UML 3.6i Standard Demo\\lib\\resources.jar;C:\\Program Files\\MagicDraw UML 3.6i Standard Demo\\lax.jar;"
+		)
+		(CppLanguageOptions
+			mGenEmptyDoc FALSE
+			mBracketInNewLine TRUE
+			mAddSpaces TRUE
+			mCommentStyle 0
+			mUseJavaDoc FALSE
+			mCommentsStyle 0
+			mDocumentationOption FALSE
+			mUseIncludePath FALSE
+			mUseMacros FALSE
+			mIncludePath ""
+		)
+		(IDLLanguageOptions
+			mTranslationLang "IDL"
+			mGenEmptyDoc FALSE
+			mBracketInNewLine TRUE
+			mAddSpaces TRUE
+			mCommentStyle 0
+			mUseJavaDoc FALSE
+		)
+	)
+	(RTProperties
+		(JavaLanguageProperties
+			(mProperties
+				mName "Method"
+				mObjectDataID "ID000000000013"
+				THROWS_EXCEPTIONS "SQLException"
+			)
+			(mProperties
+				mName "Method"
+				mObjectDataID "ID000000000064"
+				THROWS_EXCEPTIONS "SQLException"
+			)
+			(mProperties
+				mName "Method"
+				mObjectDataID "ID00000000001c"
+				THROWS_EXCEPTIONS "SQLException"
+			)
+			(mProperties
+				mName "Method"
+				mObjectDataID "ID00000000003e"
+				THROWS_EXCEPTIONS "SQLException"
+			)
+			(mProperties
+				mName "Method"
+				mObjectDataID "ID000000000068"
+				THROWS_EXCEPTIONS "SQLException"
+			)
+			(mProperties
+				mName "Method"
+				mObjectDataID "ID00000000003a"
+				THROWS_EXCEPTIONS "SQLException"
+			)
+			(mProperties
+				mName "Method"
+				mObjectDataID "ID000000000053"
+				THROWS_EXCEPTIONS "SQLException"
+			)
+			(mProperties
+				mName "Method"
+				mObjectDataID "ID00000000004f"
+				THROWS_EXCEPTIONS "SQLException"
+			)
+			(mProperties
+				mName "Method"
+				mObjectDataID "ID000000000058"
+				THROWS_EXCEPTIONS "SQLException"
+			)
+			(mProperties
+				mName "Method"
+				mObjectDataID "ID000000000035"
+				THROWS_EXCEPTIONS "SQLException"
+			)
+			(mProperties
+				mName "Method"
+				mObjectDataID "ID00000000005e"
+				THROWS_EXCEPTIONS "SQLException"
+			)
+			(mProperties
+				mName "Method"
+				mObjectDataID "ID000000000031"
+				THROWS_EXCEPTIONS "SQLException"
+			)
+		)
+		(C++LanguageProperties
+		)
+		(IDLLanguageProperties
+		)
+	)
+	(RTProjectGroupObject
+		mID "ID000000000227"
+		mName "Code engineering sets"
+	)
+)

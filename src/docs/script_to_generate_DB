@@ -1,0 +1,14 @@
+connect 'jdbc:derby:post;create=true';
+
+create table PRODUCT(OID varchar(5), DESCRIPTION varchar(40), PRICE int, MANUFACTURER_OID varchar(5));
+insert into PRODUCT values ('p123','Coffee',3,'m001');
+insert into PRODUCT values ('p101','Beer',3,'m001');
+
+create table CUSTOMER(OID varchar(5), NAME varchar(40), AGE int);
+insert into CUSTOMER values ('c123','George',24);
+
+create table ORDERLINE(OID varchar(5), PRODUCT_OID varchar(5), QUANTITY int);
+insert into ORDERLINE values ( 'o999', 'p101', 3 );
+
+create table MANUFACTURER(OID varchar(5), ADDRESS varchar(40));
+insert into MANUFACTURER values ( 'm001', 'Dodekanisou 35');
