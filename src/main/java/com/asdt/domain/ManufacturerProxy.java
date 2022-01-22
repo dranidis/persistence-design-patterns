@@ -22,4 +22,8 @@ public class ManufacturerProxy implements IManufacturer {
     public String getAddress() {
         return getRealSubject().getAddress();
     }
+
+    public String toString() {
+        return "ManufacturerProxy: OID: [" + realSubjectOID + "] realSubject: [" + realSubject + "]";
+    }    
 }

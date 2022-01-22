@@ -12,4 +12,8 @@ public class Manufacturer extends PersistentObject implements IManufacturer {
     public String getAddress() {
         return address;
     }
+
+    public String toString() {
+        return "Manufacturer: OID: [" + oid + "] address: [" + address + "]";
+    }
 }

@@ -26,7 +26,7 @@ public class Product extends PersistentObject {
     }
 
     public String toString() {
-        return "Product: OID: [" + oid + "] Description: [" + description + "] Price: [" + price + "]";
+        return "Product: OID: [" + oid + "] Description: [" + description + "] Price: [" + price + "] Manufacturer: [" + manufacturer + "]";
     }
 
     public String getManufacturerAddress() {

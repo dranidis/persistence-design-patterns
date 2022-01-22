@@ -91,6 +91,7 @@ public class Main {
         System.out.println(product.getManufacturerAddress());
 
         System.out.println();
+        System.out.println(product);
         pause();
 
         /*
