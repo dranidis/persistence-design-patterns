@@ -131,12 +131,12 @@ public class Main {
     private static void pause() {
         // JOptionPane.showMessageDialog(null, "");
 
-        System.out.print("Press any key to continue . . . ");
-        try {
-            System.in.read();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        // System.out.print("Press any key to continue . . . ");
+        // try {
+        // System.in.read();
+        // } catch (IOException e) {
+        // e.printStackTrace();
+        // }
     }
 
     private static void createDB() {

@@ -3,9 +3,13 @@ package com.asdt.domain;
 import com.asdt.persistence.OID;
 import com.asdt.persistence.PersistenceFacade;
 
-public class ManufacturerProxy implements IManufacturer {
+/**
+ * This implementation of the pattern removes the common interface and the Proxy
+ * class extends the Subject class and wraps the Subject object.
+ */
+public class ManufacturerProxy extends Manufacturer {
     // VIRTUAL PROXY pattern
-    private IManufacturer realSubject = null;
+    private Manufacturer realSubject = null;
 
     private OID realSubjectOID;
 
@@ -13,9 +17,9 @@ public class ManufacturerProxy implements IManufacturer {
         realSubjectOID = oid;
     }
 
-    private IManufacturer getRealSubject() {
+    private Manufacturer getRealSubject() {
         if (realSubject == null)
-            realSubject = (IManufacturer) PersistenceFacade.getInstance().get(realSubjectOID, Manufacturer.class);
+            realSubject = (Manufacturer) PersistenceFacade.getInstance().get(realSubjectOID, Manufacturer.class);
         return realSubject;
     }
 
@@ -24,6 +28,6 @@ public class ManufacturerProxy implements IManufacturer {
     }
 
     public String toString() {
-        return "ManufacturerProxy: OID: [" + realSubjectOID + "] realSubject: [" + realSubject + "]";
-    }    
+        return "ManufacturerProxyExtension: OID: [" + realSubjectOID + "] realSubject: [" + realSubject + "]";
+    }
 }
