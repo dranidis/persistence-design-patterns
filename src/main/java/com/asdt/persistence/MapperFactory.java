@@ -1,6 +1,7 @@
 package com.asdt.persistence;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 import com.asdt.domain.*;
 
@@ -9,12 +10,12 @@ import com.asdt.post_persistence.*;
 
 public class MapperFactory {
     // SINGLETON
-    static private MapperFactory instance = new MapperFactory();
+    private static MapperFactory instance = new MapperFactory();
 
     private MapperFactory() {
     }
 
-    static public MapperFactory getInstance() {
+    public static MapperFactory getInstance() {
         return instance;
     }
     // END SINGLETON

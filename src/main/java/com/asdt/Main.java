@@ -3,11 +3,12 @@ package com.asdt;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import com.asdt.domain.*;
+import com.asdt.domain.Customer;
+import com.asdt.domain.OrderLine;
+import com.asdt.domain.Product;
 import com.asdt.persistence.OID;
 import com.asdt.persistence.PersistenceFacade;
 

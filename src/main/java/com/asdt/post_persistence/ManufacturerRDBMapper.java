@@ -1,8 +1,13 @@
 package com.asdt.post_persistence;
 
-import java.sql.*;
-import com.asdt.domain.*;
-import com.asdt.persistence.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.asdt.domain.Manufacturer;
+import com.asdt.persistence.AbstractRDBMapper;
+import com.asdt.persistence.OID;
+
 
 public class ManufacturerRDBMapper extends AbstractRDBMapper {
     public ManufacturerRDBMapper() {
@@ -32,5 +37,5 @@ public class ManufacturerRDBMapper extends AbstractRDBMapper {
         System.out.println("NOT IMPLEMENTED");
         System.exit(1);
         return null;
-    };
+    }
 }

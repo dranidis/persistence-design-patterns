@@ -1,12 +1,16 @@
 package com.asdt.persistence;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
-abstract public class AbstractRDBMapper extends AbstractPersistenceMapper {
+public abstract class AbstractRDBMapper extends AbstractPersistenceMapper {
     private PreparedStatement sqlGetRecord;
     protected Connection connection;
 
-    public AbstractRDBMapper(String tableName) {
+    protected AbstractRDBMapper(String tableName) {
         String url = "jdbc:derby:memory:demo";
 
         try {
@@ -38,7 +42,7 @@ abstract public class AbstractRDBMapper extends AbstractPersistenceMapper {
         return object;
     }
 
-    abstract protected Object getObjectFromRecord(OID oid, ResultSet record) throws SQLException;
+    protected abstract Object getObjectFromRecord(OID oid, ResultSet resultSet) throws SQLException;
 
     protected void putObjectInStorage(OID oid, Object object) {
         System.out.println("Checking if object " + oid + " exists in Storage...");
@@ -65,7 +69,7 @@ abstract public class AbstractRDBMapper extends AbstractPersistenceMapper {
         }
     }
 
-    abstract protected PreparedStatement getInsertStatement(OID oid, Object object) throws SQLException;
+    protected abstract PreparedStatement getInsertStatement(OID oid, Object object) throws SQLException;
 
-    abstract protected PreparedStatement getUpdateStatement(OID oid, Object object) throws SQLException;
+    protected abstract PreparedStatement getUpdateStatement(OID oid, Object object) throws SQLException;
 }

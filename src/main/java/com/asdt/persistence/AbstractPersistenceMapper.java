@@ -1,8 +1,9 @@
 package com.asdt.persistence;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
-abstract public class AbstractPersistenceMapper implements IMapper {
+public abstract class AbstractPersistenceMapper implements IMapper {
     private final Map<String, Object> cashedObjects = new HashMap<>();
 
     // TEMPLATE METHOD pattern
@@ -22,7 +23,7 @@ abstract public class AbstractPersistenceMapper implements IMapper {
         return object;
     }
 
-    abstract protected Object getObjectFromStorage(OID oid);
+    protected abstract Object getObjectFromStorage(OID oid);
     // END TEMPLATE
 
     public final synchronized void put(final OID oid, final Object object) {
@@ -30,5 +31,5 @@ abstract public class AbstractPersistenceMapper implements IMapper {
         cashedObjects.put(oid.toString(), object);
     }
 
-    abstract protected void putObjectInStorage(OID oid, Object object);
+    protected abstract void putObjectInStorage(OID oid, Object object);
 }

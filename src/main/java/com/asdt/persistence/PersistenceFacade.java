@@ -1,17 +1,17 @@
 package com.asdt.persistence;
 
-import java.util.*;
+import java.util.Map;
 
 public class PersistenceFacade {
     private Map<Class<?>, IMapper> mappers = MapperFactory.getInstance().getAllMappers();
 
     // SINGLETON pattern
-    static private PersistenceFacade instance = null;
+    private static PersistenceFacade instance = null;
 
     private PersistenceFacade() {
     }
 
-    static public PersistenceFacade getInstance() {
+    public static PersistenceFacade getInstance() {
         if (instance == null)
             instance = new PersistenceFacade();
         return instance;
@@ -19,7 +19,7 @@ public class PersistenceFacade {
     // end of SINGLETON pattern
 
     public Object get(OID oid, Class<?> objectClass) {
-        IMapper mapper = (IMapper) mappers.get(objectClass);
+        IMapper mapper = mappers.get(objectClass);
         if (mapper == null) {
             System.out.println("PFW Error: No Mapper added for " + objectClass);
             System.exit(1);
@@ -28,7 +28,7 @@ public class PersistenceFacade {
     }
 
     public void put(OID oid, Object object) {
-        IMapper mapper = (IMapper) mappers.get(object.getClass());
+        IMapper mapper = mappers.get(object.getClass());
         if (mapper == null) {
             System.out.println("PFW Error: No Mapper added for " + object.getClass());
             System.exit(1);
