@@ -8,6 +8,7 @@ import com.asdt.domain.ManufacturerProxy;
 import com.asdt.domain.Product;
 import com.asdt.persistence.AbstractRDBMapper;
 import com.asdt.persistence.OID;
+import com.asdt.util.Console;
 
 public class ProductRDBMapper extends AbstractRDBMapper {
     public ProductRDBMapper() {
@@ -31,13 +32,13 @@ public class ProductRDBMapper extends AbstractRDBMapper {
     }
 
     protected PreparedStatement getInsertStatement(OID oid, Object object) throws SQLException {
-        System.out.println("NOT IMPLEMENTED");
+        Console.println("NOT IMPLEMENTED");
         System.exit(1);
         return null;
     }
 
     protected PreparedStatement getUpdateStatement(OID oid, Object object) throws SQLException {
-        System.out.println("NOT IMPLEMENTED");
+        Console.println("NOT IMPLEMENTED");
         System.exit(1);
         return null;
     }
