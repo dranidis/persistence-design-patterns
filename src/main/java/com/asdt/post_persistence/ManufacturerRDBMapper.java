@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import com.asdt.domain.Manufacturer;
 import com.asdt.persistence.AbstractRDBMapper;
 import com.asdt.persistence.OID;
+import com.asdt.util.Console;
 
 
 public class ManufacturerRDBMapper extends AbstractRDBMapper {
@@ -28,13 +29,13 @@ public class ManufacturerRDBMapper extends AbstractRDBMapper {
     }
 
     protected PreparedStatement getUpdateStatement(OID oid, Object object) throws SQLException {
-        System.out.println("NOT IMPLEMENTED");
+        Console.println("NOT IMPLEMENTED");
         System.exit(1);
         return null;
     }
 
     protected PreparedStatement getInsertStatement(OID oid, Object object) throws SQLException {
-        System.out.println("NOT IMPLEMENTED");
+        Console.println("NOT IMPLEMENTED");
         System.exit(1);
         return null;
     }

@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.asdt.util.Console;
+
 public abstract class AbstractRDBMapper extends AbstractPersistenceMapper {
     private PreparedStatement sqlGetRecord;
     protected Connection connection;
@@ -45,22 +47,22 @@ public abstract class AbstractRDBMapper extends AbstractPersistenceMapper {
     protected abstract Object getObjectFromRecord(OID oid, ResultSet resultSet) throws SQLException;
 
     protected void putObjectInStorage(OID oid, Object object) {
-        System.out.println("Checking if object " + oid + " exists in Storage...");
+        Console.println("Checking if object " + oid + " exists in Storage...");
         Object obj = PersistenceFacade.getInstance().get(oid, object.getClass());
         int result = 0;
         PreparedStatement preparedStatement;
         try {
             if (obj == null) {
-                System.out.println("will INSERT");
+                Console.println("will INSERT");
                 preparedStatement = getInsertStatement(oid, object);
             } else {
-                System.out.println("will UPDATE");
+                Console.println("will UPDATE");
                 preparedStatement = getUpdateStatement(oid, object);
             }
             result = preparedStatement.executeUpdate();
-            System.out.println("Statement Result : " + result);
+            Console.println("Statement Result : " + result);
             if (result == 0) {
-                System.out.println("Unable to execute STATEMENT");
+                Console.println("Unable to execute STATEMENT");
                 connection.rollback();
             } else
                 connection.commit();

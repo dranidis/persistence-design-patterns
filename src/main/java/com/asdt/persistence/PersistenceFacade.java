@@ -2,6 +2,8 @@ package com.asdt.persistence;
 
 import java.util.Map;
 
+import com.asdt.util.Console;
+
 public class PersistenceFacade {
     private Map<Class<?>, IMapper> mappers = MapperFactory.getInstance().getAllMappers();
 
@@ -21,7 +23,7 @@ public class PersistenceFacade {
     public Object get(OID oid, Class<?> objectClass) {
         IMapper mapper = mappers.get(objectClass);
         if (mapper == null) {
-            System.out.println("PFW Error: No Mapper added for " + objectClass);
+            Console.println("PFW Error: No Mapper added for " + objectClass);
             System.exit(1);
         }
         return mapper.get(oid);
@@ -30,7 +32,7 @@ public class PersistenceFacade {
     public void put(OID oid, Object object) {
         IMapper mapper = mappers.get(object.getClass());
         if (mapper == null) {
-            System.out.println("PFW Error: No Mapper added for " + object.getClass());
+            Console.println("PFW Error: No Mapper added for " + object.getClass());
             System.exit(1);
         }
         mapper.put(oid, object);
