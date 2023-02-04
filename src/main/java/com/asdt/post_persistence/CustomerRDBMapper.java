@@ -1,8 +1,13 @@
 package com.asdt.post_persistence;
 
-import java.sql.*;
-import com.asdt.domain.*;
-import com.asdt.persistence.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.asdt.domain.Customer;
+import com.asdt.persistence.AbstractRDBMapper;
+import com.asdt.persistence.OID;
+
 
 public class CustomerRDBMapper extends AbstractRDBMapper {
     private PreparedStatement sqlInsert;
